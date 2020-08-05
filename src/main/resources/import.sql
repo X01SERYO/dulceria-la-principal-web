@@ -1,0 +1,2 @@
+INSERT INTO productos (codigo, nombre, cantidad, precio_compra, precio_venta) VALUES(1, 'BOM BOM BUM', 0, 2000, 3000);
+INSERT INTO productos (codigo, nombre, cantidad, precio_compra, precio_venta) VALUES(2, 'GALLETAS', 0, 3000, 4000);
