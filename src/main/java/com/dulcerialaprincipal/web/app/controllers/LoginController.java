@@ -25,8 +25,7 @@ public class LoginController {
 			model.addAttribute("error", "Credenciales invalidas, intente nuevamente");
 		}
 		
-		if(logout!=null)
-		{
+		if(logout!=null){
 			model.addAttribute("success", "Ha cerrado sesion con exito");
 		}
 		

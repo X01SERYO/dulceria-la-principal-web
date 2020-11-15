@@ -14,6 +14,6 @@ public interface IProductoDao {
 
 	public List<Producto> buscarId(Integer codigo);
 
-	public void registrarProductos(Producto producto);
+	public void registrarProductos(Producto producto) ;
 
 }

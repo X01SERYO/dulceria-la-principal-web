@@ -79,7 +79,7 @@
 
 					<div class="col-sm-6">
 						<input type="number" th:field="*{idcliente}" class="form-control"
-							th:errorclass="'form-control alert-danger'" /> <small
+							th:errorclass="'form-control alert-danger'" required /> <small
 							class="form-text text-danger text-uppercase"
 							th:if="${#fields.hasErrors('idcliente')}"
 							th:errors="*{idcliente}"></small>
@@ -92,7 +92,7 @@
 					<div class="col-sm-6">
 						<input type="text" th:field="*{nombre}"
 							class="form-control  text-uppercase"
-							th:errorclass="'form-control alert-danger'" /> <small
+							th:errorclass="'form-control alert-danger'" required /> <small
 							class="form-text text-danger text-uppercase"
 							th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
 					</div>

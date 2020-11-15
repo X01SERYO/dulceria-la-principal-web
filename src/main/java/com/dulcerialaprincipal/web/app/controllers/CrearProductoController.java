@@ -30,7 +30,7 @@ public class CrearProductoController {
 
 	@RequestMapping(value = "/home/homeproducto/registrarproducto", method = RequestMethod.POST)
 	public String guardarProducto(@Valid Producto producto) {
-
+		System.out.println(producto.getNombre());
 		productoService.registrarProductos(producto);
 		return "redirect:consultarinventario";
 	}
