@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.security.Principal;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 class LoginControllerTest {
 
 	@Test
@@ -20,9 +18,10 @@ class LoginControllerTest {
 	
 	@Test
 	void loginTestError() {
-		String retorno= "redirect:/home";
+		String retorno= "redirect:home";
 		LoginController a = new LoginController();
 		Principal principal = new Principal() {
+			
 			@Override
 			public String getName() {
 				// TODO Auto-generated method stub

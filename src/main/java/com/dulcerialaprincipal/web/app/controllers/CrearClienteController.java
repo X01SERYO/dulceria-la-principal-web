@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dulcerialaprincipal.web.app.models.entity.Cliente;
 import com.dulcerialaprincipal.web.app.models.service.IClienteService;
@@ -29,9 +30,14 @@ public class CrearClienteController {
 	}
 
 	@RequestMapping(value = "/home/homeventa/registrarcliente", method = RequestMethod.POST)
-	public String guardarCliente(@Valid Cliente cliente) {
+	public String guardarCliente(@Valid Cliente cliente, RedirectAttributes flash) {
+		if (clienteService.buscarUnCliente(cliente.getIdcliente()) == null) {
+			clienteService.registrarClientes(cliente);
+			return "redirect:consultacliente";
+		} else {
+			flash.addFlashAttribute("error", "El cliente ya está registrado");
+			return "redirect:registrarcliente";
+		}
 
-		clienteService.registrarClientes(cliente);
-		return "redirect:consultacliente";
 	}
 }
