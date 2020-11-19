@@ -13,6 +13,8 @@ import com.dulcerialaprincipal.web.app.models.entity.Cliente;
 @SpringBootTest
 class CrearClienteControllerTest {
 	@Autowired
+	
+	
 	private CrearClienteController crear;
 		
 	@org.junit.jupiter.api.Test
